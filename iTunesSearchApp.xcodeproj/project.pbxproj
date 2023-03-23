@@ -16,6 +16,10 @@
 		C0A4F1FD29CB5B9E0068F86C /* ITunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4F1FC29CB5B9E0068F86C /* ITunesModel.swift */; };
 		C0A4F1FF29CB5C6B0068F86C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4F1FE29CB5C6B0068F86C /* Service.swift */; };
 		C0A4F20229CB8B1C0068F86C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C0A4F20129CB8B1C0068F86C /* Alamofire */; };
+		C0A4F20429CB8D110068F86C /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A4F20329CB8D110068F86C /* HomeStoryboard.storyboard */; };
+		C0A4F20629CB8D570068F86C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4F20529CB8D570068F86C /* HomeViewController.swift */; };
+		C0A4F20929CBA1CC0068F86C /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4F20829CBA1CC0068F86C /* HomeCollectionViewCell.swift */; };
+		C0A4F20C29CBA8D50068F86C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C0A4F20B29CBA8D50068F86C /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,9 @@
 		C0A4F1F129CB5AD60068F86C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A4F1FC29CB5B9E0068F86C /* ITunesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesModel.swift; sourceTree = "<group>"; };
 		C0A4F1FE29CB5C6B0068F86C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		C0A4F20329CB8D110068F86C /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		C0A4F20529CB8D570068F86C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C0A4F20829CBA1CC0068F86C /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A4F20C29CBA8D50068F86C /* Kingfisher in Frameworks */,
 				C0A4F20229CB8B1C0068F86C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +112,9 @@
 		C0A4F1FA29CB5B560068F86C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C0A4F20729CBA1300068F86C /* Cell */,
+				C0A4F20329CB8D110068F86C /* HomeStoryboard.storyboard */,
+				C0A4F20529CB8D570068F86C /* HomeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +124,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C0A4F20729CBA1300068F86C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C0A4F20829CBA1CC0068F86C /* HomeCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +152,7 @@
 			name = iTunesSearchApp;
 			packageProductDependencies = (
 				C0A4F20129CB8B1C0068F86C /* Alamofire */,
+				C0A4F20B29CBA8D50068F86C /* Kingfisher */,
 			);
 			productName = iTunesSearchApp;
 			productReference = C0A4F1E029CB5AD20068F86C /* iTunesSearchApp.app */;
@@ -164,6 +184,7 @@
 			mainGroup = C0A4F1D729CB5AD10068F86C;
 			packageReferences = (
 				C0A4F20029CB8B1C0068F86C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C0A4F20A29CBA8D50068F86C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = C0A4F1E129CB5AD20068F86C /* Products */;
 			projectDirPath = "";
@@ -181,6 +202,7 @@
 			files = (
 				C0A4F1F029CB5AD60068F86C /* LaunchScreen.storyboard in Resources */,
 				C0A4F1ED29CB5AD60068F86C /* Assets.xcassets in Resources */,
+				C0A4F20429CB8D110068F86C /* HomeStoryboard.storyboard in Resources */,
 				C0A4F1EB29CB5AD20068F86C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,11 +214,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A4F20929CBA1CC0068F86C /* HomeCollectionViewCell.swift in Sources */,
 				C0A4F1E829CB5AD20068F86C /* ViewController.swift in Sources */,
 				C0A4F1FD29CB5B9E0068F86C /* ITunesModel.swift in Sources */,
 				C0A4F1FF29CB5C6B0068F86C /* Service.swift in Sources */,
 				C0A4F1E429CB5AD20068F86C /* AppDelegate.swift in Sources */,
 				C0A4F1E629CB5AD20068F86C /* SceneDelegate.swift in Sources */,
+				C0A4F20629CB8D570068F86C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +372,7 @@
 				INFOPLIST_FILE = iTunesSearchApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = HomeStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -376,7 +400,7 @@
 				INFOPLIST_FILE = iTunesSearchApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = HomeStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -424,6 +448,14 @@
 				kind = branch;
 			};
 		};
+		C0A4F20A29CBA8D50068F86C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -431,6 +463,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C0A4F20029CB8B1C0068F86C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		C0A4F20B29CBA8D50068F86C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0A4F20A29CBA8D50068F86C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -82,9 +82,9 @@ enum Currency: String, Codable {
 
 enum Kind: String, Codable {
     case featureMovie = "feature-movie"
-    case podcast = "podcast"
+    case book = "book"
+    case softwarePackage = "software-package"
     case song = "song"
-    case tvEpisode = "tv-episode"
 }
 
 enum WrapperType: String, Codable {
