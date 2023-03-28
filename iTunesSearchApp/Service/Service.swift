@@ -11,11 +11,17 @@ import Alamofire
 enum ITunesAPI: String {
     case BASE_URL = "https://itunes.apple.com/search?"
     case TERM_PATH = "term="
+    case LIMIT_PATH = "&limit=200"
     case COUNTRY_PATH = "&country=us"
-    case CALLBACK_PATH = "&callback=wsSearchCB"
+//    case CALLBACK_PATH = "&callback=wsSearchCB"
+    
+    
+//    static func searchURL(query: String) -> String {
+//        return "\(BASE_URL.rawValue)\(TERM_PATH.rawValue)\(query)\(LIMIT_PATH.rawValue)\(COUNTRY_PATH.rawValue)\(CALLBACK_PATH.rawValue)"
+//    }
     
     static func searchURL(query: String) -> String {
-        return "\(BASE_URL.rawValue)\(TERM_PATH.rawValue)\(query)\(COUNTRY_PATH.rawValue)\(CALLBACK_PATH.rawValue)"
+        return "\(BASE_URL.rawValue)\(TERM_PATH.rawValue)\(query)\(LIMIT_PATH.rawValue)\(COUNTRY_PATH.rawValue)"
     }
     
 }
@@ -33,6 +39,7 @@ struct ITunesService: ITunesServiceProtocol {
         
         let query = query.replacingOccurrences(of: " ", with: "+")
         let urlString = ITunesAPI.searchURL(query: query)
+        
         guard let url = URL(string: urlString) else {
             return
         }

@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var collectionView: UICollectionView!
+    let homeViewModel: HomeViewModelProtocol = HomeViewModel()
     private let searcher = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -69,6 +70,6 @@ extension HomeViewController: UISearchBarDelegate {
         guard let text = searchBar.text else {
             return
         }
-        print(text)
+        homeViewModel.makeSearch(searchTerm: text)
     }
 }
